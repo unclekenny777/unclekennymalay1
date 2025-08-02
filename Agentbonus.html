@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susun Atur Malay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f3ea;
+            color: #4a4a4a;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 0;
+            border-bottom: 1px solid #eae0d0;
+        }
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .text {
+            width: 48%;
+        }
+        .image {
+            width: 48%;
+        }
+        .image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #3b3a39;
+        }
+        .checkmark {
+            height: 24px;
+            width: 24px;
+            background-color: #61764b;
+            border-radius: 50%;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        scroll-down-btn {
+  /* 不要加 margin: auto，直接 margin-top */
+  margin-top: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.09);
+  transition: box-shadow 0.18s, transform 0.16s;
+  z-index: 10;
+  padding: 0;
+}
+.scroll-down-btn:hover {
+  box-shadow: 0 4px 32px rgba(0,0,0,0.16);
+  transform: translateY(2px) scale(1.06);
+}
+
+.promo-img-row {
+  display: flex;
+  gap: 24px;          /* 图片间距 */
+  justify-content: center;
+  margin-top: 18px;
+  margin-bottom: 28px;  
+}
+
+.promo-img {
+  width: 800%;        /* 或你喜欢的宽度，比如350px、380px都可以 */
+  max-width: 100%;     /* 手机自适应 */
+  border-radius: 18px; /* 可选，圆角 */
+  box-shadow: 0 4px 18px rgba(80,90,100,0.07); /* 可选，阴影 */
+}
+
+    </style>
+</head>
+<body>
+
+<div class="section">
+    <div class="text"> 
+        <h2>Kongsi kod QR anda</h2>
+        <p>Log masuk ke akaun anda dan ketik di sini untuk menjana kod QR eksklusif anda.Kongsi dengan rakan anda—sebaik sahaja mereka imbas dan daftar, anda akan menerima komisen daripada jumlah pertaruhan mereka!</p>
+   
+ </div>
+    <div class="image">
+        <img src="promote your qr malay.jpg">
+    </div>
+</div>
+
+<div class="section" id="komisen-ejen">
+    <div class="komisen-box"></div>
+    <div class="text">
+        <h2>Komisen ejen</h2>
+        <p>Bila anda menjemput rakan melalui kod QR atau pautan unik anda, anda akan menerima peratusan daripada kerugian bersih mereka sebagai komisen tambahan! Semua komisen dibayar terus ke akaun bank anda—bukan sebagai kredit platform—memberikan anda lebih fleksibiliti dan pengeluaran yang lebih pantas.
+        <p>0-5 rakan: 5% komisen</p>
+        <p>6-20 rakan: 10% komisen</p>
+        <p>21+ rakan: 20% komisen</p>
+        <p>Lebih ramai rakan yang anda jemput, lebih tinggi komisen anda—mulakan pendapatan pasif anda hari ini!</p>
+        
+    </div>
+    <div class="image">
+        <img src="malay agent bonus.jpg">
+    </div>
+</div>
+
+<!-- 美观居中版 国际充值说明 -->
+<div class="center-box">
+    <div class="desc-text">
+        Platform kami kini menyokong deposit dalam <b>USDT, Dolar Singapura, dan Ringgit Malaysia!</b><br>
+        Jika anda mempunyai rakan yang menggunakan mata wang ini, hanya minta mereka imbas kod QR anda untuk mendaftar.<br>
+        Tidak kira mata wang mana yang mereka deposit, anda tetap akan menerima komisen daripada aktiviti mereka.<br>
+        Jemput lebih ramai pemain antarabangsa dan maksimumkan pendapatan anda hari ini!
+    </div>
+    <img src="singapore.jpg" alt="singapore" class="promo-img" />
+    <img src="usdt.jpg" alt="usdt" class="promo-img" />
+</div>
+<script>
+function scrollToNextSection(targetId) {
+  document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+
+</body>
+</html>

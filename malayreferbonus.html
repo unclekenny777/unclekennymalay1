@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebat VIP - Jenama Saya</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f3f3f3;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            display: flex;
+            width: 110vw;
+            max-width: 1650px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .image-side {
+            flex: 1;
+            min-width: 350px;
+            background: #eee url('malay refer bonnus.jpg') center center/cover no-repeat;
+            /* 替换 'your-image.jpg' 为你自己的图片路径 */
+            height: 800px;
+        }
+        .text-side {
+            flex: 1;
+            padding: 48px 38px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .text-side h1 {
+            font-size: 2.1em;
+            letter-spacing: 6px;
+            margin-bottom: 20px;
+        }
+        .text-side p {
+            font-size: 1.13em;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+        .text-side a {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 8px;
+            background: #003b7a;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.2s;
+            margin-top: 15px;
+        }
+        .text-side a:hover {
+            background: #0055bb;
+        }
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                max-width: 95vw;
+            }
+            .image-side {
+                height: 240px;
+                min-width: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-side"></div>
+        <div class="text-side">
+            <h1>BONUS RUJUKAN RAKAN 5%</h1>
+            <p>
+                Jemput rakan untuk daftar dan deposit melalui kod rujukan atau kod QR anda, dan anda akan menerima 5%<br>
+                daripada jumlah deposit mereka sebagai bonus—sehingga RM100 bagi setiap tuntutan,<br><br>
+                maksimum 3 tuntutan sehari (tiada tuntutan berganda dari IP yang sama).
+
+            </p>
+            <a href="index.html">BACK</a>
+        </div>
+    </div>
+</body>
+</html>
+

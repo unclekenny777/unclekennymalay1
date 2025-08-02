@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile UI Glassmorphism</title>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: url('sports1.jpg') no-repeat center center/cover;
+      /* 你可以用自己的背景图 */
+    }
+    .glass-card {
+      margin: 48px auto;
+      max-width:  1200px;
+      min-height: 200px;
+      background: rgba(35, 39, 42, 0.67);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-radius: 48px;
+      box-shadow: none;
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      overflow: hidden;
+    }
+    .left, .right {
+      flex: 1;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .left {
+      align-items: center;
+    }
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 32px;
+    }
+    .profile-name {
+      font-size: 56px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 24px;
+      letter-spacing: 1px;
+    }
+    .profile-desc {
+      color: #d0d6db;
+      font-size: 22px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 420px;
+    }
+    .social-row {
+      display: flex;
+      gap: 36px;
+    }
+    .social-btn {
+      width: 64px;
+      height: 64px;
+      border: 2px solid #c7c9cd55;
+      border-radius: 50%;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #fff;
+      margin-top: 16px;
+      transition: border-color 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+    .social-btn:hover {
+      border-color: #fff;
+      color: #97bfff;
+    }
+    .right {
+      border-left: 1.5px solid rgba(200,200,200,0.14);
+      padding-left: 56px;
+      padding-right: 56px;
+      justify-content: space-evenly;
+    }
+    .section {
+      margin-bottom: 56px;
+    }
+    .section-title {
+      font-size: 40px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+    .section-desc {
+      color: #d0d6db;
+      font-size: 22px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 30px;
+      margin-bottom: 20px;
+    }
+    .link-btn {
+      background: transparent;
+      border: 2px solid #c7c9cd55;
+      border-radius: 28px;
+      color: #fff;
+      font-size: 22px;
+      padding: 14px 32px;
+      margin-right: 0;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .link-btn:hover {
+      border-color: #fff;
+      background: rgba(220,220,255,0.08);
+      color: #97bfff;
+    }
+    @media (max-width: 900px) {
+      .glass-card {
+        flex-direction: column;
+        max-width: 98vw;
+        border-radius: 24px;
+      }
+      .left, .right {
+        padding: 32px 24px;
+      }
+      .right {
+        border-left: none;
+        border-top: 1.5px solid rgba(200,200,200,0.14);
+        padding-top: 24px;
+      }
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    }
+    .swiper.slideshow-swiper {
+  width: 400px;   /* 你可以自定义 */
+  height: 300px;
+  margin-bottom: 30px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: none;
+  background: rgba(0,0,0,0.14);
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-bullet {
+  background: #fff !important;
+  opacity: 0.7;
+}
+.contact-btns {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.tg-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(45, 136, 255, 0.18);
+  color: #fff;
+  font-size: 20px;
+  padding: 12px 28px;
+  border-radius: 16px;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0 2px 16px 0 rgba(20,30,60,0.12);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  font-weight: 500;
+  margin-top: -60px;   /* 这里就可以了！ */
+}
+
+.tg-btn:hover {
+  background: rgba(45, 136, 255, 0.36);
+  box-shadow: 0 4px 24px 0 rgba(45,136,255,0.12);
+  transform: translateY(-2px) scale(1.03);
+  color: #fff;
+}
+.tg-btn img {
+  margin-right: 8px;
+}
+.bonus-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.bonus-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.pretty-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: rgba(255,255,255,0.14);
+  border-radius: 18px;
+  box-shadow: 0 6px 18px 0 rgba(0,0,0,0.05), 0 1.5px 6px 0 rgba(0,0,0,0.06);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f89449;
+  text-decoration: none;
+  transition: transform 0.14s, box-shadow 0.14s;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.pretty-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 10px 24px 0 rgba(40,76,173,0.18);
+  background: rgba(255,255,255,0.22);
+}
+
+.pretty-btn span {
+  background: #4766f9;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.95em;
+  margin-left: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.desc {
+    color: #ffffff; /* 这里是金色，可以改成你喜欢的颜色 */
+}
+
+h1, h2, h3, .main-title {
+  color: #ffd900 !important;
+  text-shadow: 1px 1px 6px #000 !important;
+}
+.main-title {
+  color: #FFD700;
+  text-shadow: 1px 1px 6px #000;
+  font-size: 30px;        /* 更大！ */
+  font-weight: bold;
+}
+
+.section-title {
+  color: #FFD700;
+  text-shadow: 1px 1px 6px #000;
+  font-size: 20px;        /* 你喜欢多大就写多少 */
+  font-weight: bold;
+}
+.gold-title {
+  color: #FFD700;
+  text-shadow: 1px 1px 6px #000;
+  font-weight: bold;
+}
+
+/* 只控制 Uncle Kenny 的大小 */
+.profile-name {
+  font-size: 80px;    /* 你要多大就写多少，比如 40px、48px */
+  /* 可以加字体间距或别的样式 */
+}
+.profile-img {
+  width: 100%;
+  max-width: 280px;  /* 最大不超过220px */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+  </style>
+</head>
+<body><script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    
+  <div class="glass-card">
+    <div class="left">
+      <img class="profile-img" src="unclekenny logo.png" alt="Henry Case" />
+      <div class="profile-name gold-title">Uncle Kenny</div>
+      <!-- Slideshow Start -->
+<div class="swiper slideshow-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="login.png" /></div>
+    <div class="swiper-slide"><img src="Live.png" /></div>
+    <div class="swiper-slide"><img src="slot.png" /></div>
+  </div>
+  <!-- 可选：分页点 -->
+  <div class="swiper-pagination"></div>
+</div>
+<!-- Slideshow End -->
+      <div class="profile-desc">
+        
+      </div>
+      <div class="social-row">
+        <div class="contact-btns">
+  <!-- 其他按钮 -->
+  <a class="tg-btn" href="https://t.me/twc1803" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" style="width:24px;height:24px;vertical-align:middle;filter:invert(1);" alt="Telegram" />
+    <span>Telegram </span>
+  </a>
+</div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="section">
+        <h2 class="main-title">True Won Club</h2>
+        <div class="section-desc">
+          adalah platform perjudian yang paling terkenal di versi mudah alih. Ia mudah digunakan, deposit dan pengeluaran sangat cepat. Memperkenalkan rakan untuk bermain juga membolehkan anda menerima turnover rakan anda, dan anda juga boleh memindahkan wang kepada rakan.</div>
+
+
+      </div>
+      <div class="section">
+        <div class="main-title">Berikut adalah promosi saya</div>
+        <div class="bonus-buttons">
+          <div class="desc">Semua promosi ini hanya perlu turnover x1 dan setiap hari Isnin, jam 1 petang akan automatik masuk ke akaun anda.</div>
+          
+                <a href="1deposit3promotionmalay.html" class="pretty-btn custom-btn">DEPOSIT SEKALI NIKMATI SEMUA GANJARAN!<span>Detail</span></a>
+                <a href="rewardpointmalay.html" class="pretty-btn custom-btn">MATA GANJARAN!<span>Detail</span></a>
+                <a href="malayturnoverbonus.html" class="pretty-btn custom-btn">TURNOVER BONUS 0.1%<span>Detail</span></a>
+                <a href="cashback5.html" class="pretty-btn custom-btn">CASH BACK<span>Detail</span></a>
+                <a href="malayreferbonus.html" class="pretty-btn custom-btn">BONUS RUJUKAN RAKAN<span>Detail</span></a>
+                <a href="Agentbonus.html" class="pretty-btn custom-btn">AGENT BONUS <span>Detail</span></a>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  new Swiper('.slideshow-swiper', {
+  loop: true,
+  pagination: { el: '.swiper-pagination', clickable: true },
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false
+  }
+});
+</script>
+</body>
+</html>
+
