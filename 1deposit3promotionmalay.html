@@ -15,22 +15,28 @@
             align-items: center;
             min-height: 100vh;
         }
-        .container {
-            display: flex;
-            width: 110vw;
-            max-width: 1650px;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            overflow: hidden;
-        }
-        .image-side {
-            flex: 1;
-            min-width: 350px;
-            background: #eee url('1 deposit 3 promotion malay.jpg') center center/cover no-repeat;
-            /* 替换 'your-image.jpg' 为你自己的图片路径 */
-            height: 800px;
-        }
+      .container {
+    display: flex;
+    width: 110vw;      /* 或100vw，看你实际需求 */
+    max-width: 1650px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    padding: 0;         /* <--- 关键，去掉 padding */
+    margin: 0 auto;     /* 保持居中 */
+}
+   .image-side img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.text-side {
+    flex: 1;
+    max-width: 370px;
+    padding: 48px 30px;
+}
         .text-side {
             flex: 1;
             padding: 48px 38px;
@@ -78,7 +84,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-side"></div>
+        <div class="image-side"></div> <img src="1 deposit 3 promotion malay.jpg" alt="1deposit3promotion" style="max-width:100%;">
         <div class="text-side">
             <h1>Deposit sekali, nikmati semua ganjaran!</h1>
             <p>
