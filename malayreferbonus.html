@@ -24,13 +24,12 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
             overflow: hidden;
         }
-        .image-side {
-            flex: 1;
-            min-width: 350px;
-            background: #eee url('malay refer bonnus.jpg') center center/cover no-repeat;
-            /* 替换 'your-image.jpg' 为你自己的图片路径 */
-            height: 800px;
-        }
+        .image-side img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
         .text-side {
             flex: 1;
             padding: 48px 38px;
@@ -78,7 +77,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-side"></div>
+        <div class="image-side"></div> <img src="malay refer bonnus.jpg" alt="refer bonus" style="max-width:100%;">
         <div class="text-side">
             <h1>BONUS RUJUKAN RAKAN 5%</h1>
             <p>
