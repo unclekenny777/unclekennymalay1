@@ -83,6 +83,11 @@
   border-radius: 18px; /* 可选，圆角 */
   box-shadow: 0 4px 18px rgba(80,90,100,0.07); /* 可选，阴影 */
 }
+@media (max-width: 600px) {
+  .some-class {
+    display: none;
+  }
+}
 
     </style>
 </head>
@@ -126,11 +131,11 @@
     <img src="singapore.jpg" alt="singapore" class="promo-img" />
     <img src="usdt.jpg" alt="usdt" class="promo-img" />
 </div>
-<div style="width:100%; text-align:center; margin-top:20px;">
+ <div style="width:100%; text-align:center; margin-top:20px;">
   <a href="index.html" style="
-    display:inline-block;
+    display:inline-block !important;
     padding: 12px 40px;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     background: #003366;
     color: #fff;
     border: none;
@@ -141,8 +146,12 @@
     box-shadow: 0 2px 8px #0001;
     cursor: pointer;
     transition: background 0.2s;
-  " onmouseover="this.style.background='#0055aa'" onmouseout="this.style.background='#003366'">
-    BACK 
+    max-width: 90vw;
+    min-width: 120px;
+  " 
+  onmouseover="this.style.background='#0055aa'" 
+  onmouseout="this.style.background='#003366'">
+    BACK
   </a>
 </div>
 
