@@ -15,22 +15,28 @@
             align-items: center;
             min-height: 100vh;
         }
-        .container {
-            display: flex;
-            width: 110vw;
-            max-width: 1650px;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            overflow: hidden;
-        }
-        .image-side {
-            flex: 1;
-            min-width: 350px;
-            background: #eee url('malay turnover bonus.jpg') center center/cover no-repeat;
-            /* 替换 'your-image.jpg' 为你自己的图片路径 */
-            height: 800px;
-        }
+      .container {
+    display: flex;
+    width: 110vw;      /* 或100vw，看你实际需求 */
+    max-width: 1650px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    padding: 0;         /* <--- 关键，去掉 padding */
+    margin: 0 auto;     /* 保持居中 */
+}
+  .image-side img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.text-side {
+    flex: 1;
+    max-width: 370px;
+    padding: 48px 30px;
+}
         .text-side {
             flex: 1;
             padding: 48px 38px;
@@ -78,11 +84,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-side"></div>
+        <div class="image-side"></div> <img src="malay turnover bonus.jpg" alt="turnoverbonus" style="max-width:100%;">
         <div class="text-side">
-            <h1>Turnover bonus 0.1%</h1>
+            <h1>Turnover bonus 0.1%!</h1>
             <p>
-                Turnover Bonus 0.1% — Pelan Comeback Mingguan Anda!<br>
+                
+                Turnover Bonus 0.1% — Pelan Comeback Mingguan Anda<br>
                 Daripada slot, kasino langsung hingga pertaruhan sukan, saya akan pulangkan 0.1% daripada semua pertaruhan anda.<br><br>
                 Setiap hari Isnin, bonus ini akan dikreditkan secara automatik ke dalam akaun anda — memberi anda satu lagi peluang untuk menang!
             </p>
@@ -91,3 +98,4 @@
     </div>
 </body>
 </html>
+

@@ -15,21 +15,28 @@
             align-items: center;
             min-height: 100vh;
         }
-        .container {
-            display: flex;
-            width: 110vw;
-            max-width: 1650px;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            overflow: hidden;
-        }
-        .image-side {
-            flex: 1;
-            min-width: 350px;
-            background: #eee url('cashbackms5.jpg') 100% center/cover no-repeat;
-            height: 800px;
-        }
+      .container {
+    display: flex;
+    width: 110vw;      /* 或100vw，看你实际需求 */
+    max-width: 1650px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    padding: 0;         /* <--- 关键，去掉 padding */
+    margin: 0 auto;     /* 保持居中 */
+}
+  .image-side img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.text-side {
+    flex: 1;
+    max-width: 370px;
+    padding: 48px 30px;
+}
         .text-side {
             flex: 1;
             padding: 48px 38px;
@@ -77,16 +84,16 @@
 </head>
 <body>
     <div class="container">
-         <div class="text-side">
-        
-           <h1>Cash Back</h1>
+        <div class="image-side"></div> <img src="cashbackms5.jpg" alt="cashback5" style="max-width:100%;">
+        <div class="text-side">
+            <h1>Cash Back 5%!</h1>
             <p>
-                Ya, saya juga menawarkan pulangan tunai 5% — tetapi pulangan tunai saya berbeza.<br>
+                Ya, saya juga menawarkan pulangan tunai 5% — tetapi pulangan tunai saya berbeza<br>
                 Anda akan menerima pulangan tunai anda secara automatik setiap hari Isnin ke dalam akaun anda.<br><br>
                 Dan jangan risau — syarat bonus saya sangat mudah hanya perlu 1x pusingan sahaja.
             </p>
             <a href="index.html">BACK</a>
-        </div><div class="image-side"></div>
+        </div>
     </div>
 </body>
 </html>
